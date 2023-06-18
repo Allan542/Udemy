@@ -1,0 +1,6 @@
+https://camel.apache.org/manual/latest/faq/why-the-name-camel.html
+https://github.com/apache/camel-examples/tree/master/examples
+https://camel.apache.org/camel-spring-boot/latest/spring-boot.html
+https://camel.apache.org/camel-spring-boot/latest/list.html
+https://github.com/apache/camel-spring-boot-examples
+https://camel.apache.org/components/latest/eips/enterprise-integration-patterns.html
