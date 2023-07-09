@@ -33,5 +33,9 @@ Curso-Spring-Framework/Curso-Java-Web-Servlets/Servidores/
 *.stackdump
 HELP.md
 mvnw*
+.DS_Store
+*.iml
+.classpath
+.project
 
 /regex/__MACOSX/
