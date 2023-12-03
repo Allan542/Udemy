@@ -1,8 +1,0 @@
-/home/giuliana/Documentos/Udemy/Spring Batch/Workspace/DemonstrativoOrcamentarioJob/src/main/java/com/springbatch/demonstrativoorcamentario/reader/DemonstrativoOrcamentarioReaderConfig.java
-/home/giuliana/Documentos/Udemy/Spring Batch/Workspace/DemonstrativoOrcamentarioJob/src/main/java/com/springbatch/demonstrativoorcamentario/dominio/Lancamento.java
-/home/giuliana/Documentos/Udemy/Spring Batch/Workspace/DemonstrativoOrcamentarioJob/src/main/java/com/springbatch/demonstrativoorcamentario/reader/ArquivoLancamentoReaderConfig.java
-/home/giuliana/Documentos/Udemy/Spring Batch/Workspace/DemonstrativoOrcamentarioJob/src/main/java/com/springbatch/demonstrativoorcamentario/step/DemonstrativoOrcamentarioStepConfig.java
-/home/giuliana/Documentos/Udemy/Spring Batch/Workspace/DemonstrativoOrcamentarioJob/src/main/java/com/springbatch/demonstrativoorcamentario/writer/DemonstrativoOrcamentarioWriterConfig.java
-/home/giuliana/Documentos/Udemy/Spring Batch/Workspace/DemonstrativoOrcamentarioJob/src/main/java/com/springbatch/demonstrativoorcamentario/DemonstrativoOrcamentarioJobApplication.java
-/home/giuliana/Documentos/Udemy/Spring Batch/Workspace/DemonstrativoOrcamentarioJob/src/main/java/com/springbatch/demonstrativoorcamentario/dominio/GrupoLancamento.java
-/home/giuliana/Documentos/Udemy/Spring Batch/Workspace/DemonstrativoOrcamentarioJob/src/main/java/com/springbatch/demonstrativoorcamentario/job/DemonstrativoOrcamentarioJob.java
