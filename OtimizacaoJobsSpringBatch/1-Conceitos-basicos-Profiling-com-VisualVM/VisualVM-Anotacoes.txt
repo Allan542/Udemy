@@ -1,0 +1,13 @@
+Quando executa o VisualVM, tem como visualizar as VMs locais e as VMs remotas, que são por exemplo processamentos batch que estão rodando em um local remoto.
+
+A aba overview tem algumas informações gerais para você saber como esse processo foi criado, como executou ele na JVM.
+
+A aba monitor que serve para monitorar a execução desse processo java através de alguns gráficos de: CPU, memória, classes e threads. Serve para capturar sintomas de alguma anomalia que ocorrer durante a execução, como um sintoma de quando você vai ao médico, dar um diagnóstico. Mostra informações sobre o Garbage Collector.
+
+A aba threads mostra todas as threads com seus respectivos status que estão apontados na aplicação.
+
+A aba sampler (amostrador) serve para quando observamos no monitor que há um pico em algum dos gráficos durante a execução do processamento, a gente pode gravar um período de execução desse processo para obter essas métricas. Quando a gente grava, a gente pode escolher se queremos um Sample (Amostragem) de CPU ou memória. A amostragem de CPU mostra algumas informações de todas as CPUs e para a memória é o mesmo, incluindo as classes usadas.
+
+O Profiler é mais especializado e permite um controle mais fino de processamento. A diferença entre ele e o sampler é que a gente pode filtrar pela classe ou pelos pacotes, mas o ideal é seguir pelas classes para ser mais específico na hora de monitorar. Ele exclui por padrão algumas classes. Se a gente que faz um profiler de CPU, de memória ou de JDBC, ele começa a monitorar de acordo com o filtro que foi colocado no Profile Classes. Por causa disso, a gente tem um controle maior do que a gente quer monitorar. Tem uma opção que se chama hotspot que é nada mais que a lista de CPU que mostra algumas métricas. O profile de memória também mostra algumas informações relacionadas ao uso da mesma, incluindo de classes. O profile de JDBC é a instrumentação quando temos JDBC, que mostra as queries, o tempo que levou para executar uma query, conexões do banco abertas.
+
+Para salvar os relatórios das informações para ser exportado ou enviado para alguém, usa-se a opção de snapshots através de um arquivo que permite que outra pessoa analise os dados.

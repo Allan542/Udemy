@@ -1,0 +1,6 @@
+br\com\primeiroprojetospringbatch\config\PropsConfig.class
+br\com\primeiroprojetospringbatch\tasklet\ImprimeOlaTasklet.class
+br\com\primeiroprojetospringbatch\step\ImprimeOlaStepConfig.class
+br\com\primeiroprojetospringbatch\job\BatchJobConfig.class
+br\com\primeiroprojetospringbatch\T1PrimeiroProjetoSpringBatchApplication.class
+br\com\primeiroprojetospringbatch\config\DataSourceConfig.class

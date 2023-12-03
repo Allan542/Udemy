@@ -1,0 +1,14 @@
+2023-07-29 18:20:36,126 INFO c.u.p.ProducaoParImparJobApplication [main] Starting ProducaoParImparJobApplication on DESKTOP-DPLHR9H with PID 17880 (started by Allan-Carlos in C:\Users\Allan Carlos\OneDrive\Documents\Pessoal\Estudos\2023\Udemy\SpringBatch\Exercicios\ProducaoParImparJob-Exercicio)
+2023-07-29 18:20:36,129 INFO c.u.p.ProducaoParImparJobApplication [main] No active profile set, falling back to default profiles: default
+2023-07-29 18:20:36,427 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.configurer is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-07-29 18:20:36,610 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-07-29 18:20:36,721 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-07-29 18:20:36,744 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-07-29 18:20:36,830 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-07-29 18:20:36,871 INFO c.u.p.ProducaoParImparJobApplication [main] Started ProducaoParImparJobApplication in 1.136 seconds (JVM running for 1.813)
+2023-07-29 18:20:37,102 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeParImparJob]] launched with the following parameters: [{run.id=14}]
+2023-07-29 18:20:37,259 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2023-07-29 18:20:37,919 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 660ms
+2023-07-29 18:20:37,985 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeParImparJob]] completed with the following parameters: [{run.id=14}] and the following status: [COMPLETED] in 845ms
+2023-07-29 18:20:37,987 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-07-29 18:20:37,997 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
