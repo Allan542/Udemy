@@ -21,7 +21,7 @@ public class SkipExceptionReaderConfig {
 		return new JdbcCursorItemReaderBuilder<Cliente>()
 				.name("skipExceptionReader")
 				.dataSource(dataSource)
-				.sql("select * from cliente")
+				.sql("select * from cliente_sobrenome")
 				.rowMapper(rowMapper()) // Existe também o método BeanRowMapper neste builder que instancia um BeanRowMapper sem precisar instanciar no método rowMapper(), que é para rowMappers customizados
 				.build();
 	}
@@ -30,10 +30,9 @@ public class SkipExceptionReaderConfig {
 		return new RowMapper<Cliente>() {
 			@Override
 			public Cliente mapRow(ResultSet rs, int i) throws SQLException {
-				if(rs.getRow() == 11){ // Por causa de um cliente inválido, ele prejudicou todos os cliente válidos, apesar de ter lido todos os clientes e guardado em memória
-					throw new SQLException(String.format("Encerrando a execução - Cliente inválido %s", rs.getString("email")));
-				}
-				else return clienteRowMapper(rs);
+
+
+				/*else*/ return clienteRowMapper(rs);
 			}
 
 			private Cliente clienteRowMapper(ResultSet rs) throws SQLException {
