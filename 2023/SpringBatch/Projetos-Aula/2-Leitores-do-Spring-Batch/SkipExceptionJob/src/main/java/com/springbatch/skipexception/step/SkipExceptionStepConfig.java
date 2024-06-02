@@ -33,7 +33,7 @@ public class SkipExceptionStepConfig {
 	private StepBuilderFactory stepBuilderFactory;
 	
 	@Bean
-	public Step skipExceptionStep(ItemReader<Cliente> skipExceptionReader, ItemWriter<Cliente> skipExceptionWriter) {
+	public Step skipExceptionStep(ItemReader<Cliente> skipExceptionReader, ItemWriter<Cliente> skipExceptionWriter) throws Exception {
 		return stepBuilderFactory
 				.get("skipExceptionStep")
 				.<Cliente, Future<Cliente>>chunk(13)
@@ -43,7 +43,7 @@ public class SkipExceptionStepConfig {
 				.faultTolerant()
 					.skipPolicy((throwable, i) -> i >= 0)
 				.skip(Exception.class)
-//				.taskExecutor(taskExecutor())
+				.taskExecutor(taskExecutor())
 //				.skipLimit(2)
 				.build();
 	}
@@ -54,12 +54,13 @@ public class SkipExceptionStepConfig {
 		return asyncItemWriter;
 	}
 
-	private AsyncItemProcessor<Cliente, Cliente> asyncItemProcessor() {
+	private AsyncItemProcessor<Cliente, Cliente> asyncItemProcessor() throws Exception {
 		AsyncItemProcessor<Cliente, Cliente> asyncItemProcessor = new AsyncItemProcessor<>();
 		asyncItemProcessor.setDelegate(cliente -> {
 			logger.info("Cliente dentro da processor: " + cliente);
 			return cliente;
 		});
+
 
 		asyncItemProcessor.setTaskExecutor(taskExecutor());
 		return asyncItemProcessor;
