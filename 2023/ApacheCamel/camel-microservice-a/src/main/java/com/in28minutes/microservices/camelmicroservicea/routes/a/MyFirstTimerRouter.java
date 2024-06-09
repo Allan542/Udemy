@@ -64,7 +64,7 @@ class SimpleLoggingProcessingComponent {
     public void process(String message) {
 
         logger.info("SimpleLoggingProcessingComponent {}", message);
-    }
+}
 }
 
 class SimpleLoggingProcessor implements Processor {

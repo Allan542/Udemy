@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Map;
 
-//@Component
+@Component
 public class EipPatternsRouter extends RouteBuilder {
 
     @Autowired
@@ -62,6 +62,13 @@ public class EipPatternsRouter extends RouteBuilder {
             .completionSize(3)
 //            .completionTimeout(HIGHEST)
             .to("log:aggregate-json");
+
+//        from("file:files/aggregate-json")
+//            .unmarshal().json(JsonLibrary.Jackson, CurrencyExchange.class) // Obrigatório fazer unmarshal para uma classe java
+//            .aggregate(body(), new ArrayListAggregationStrategy()) // Ele só agrupará os valores do campo "to" que forem iguais, caso contrário, separará para serem agrupados com seus respectivos. Ex: USD => USD, INR => INR
+//            .completionSize(3)
+////            .completionTimeout(HIGHEST)
+//            .to("log:aggregate-json");
 
         String routingSlip = "direct:endpoint1,direct:endpoint3";
 //        String routingSlip = "direct:endpoint1,direct:endpoint2,direct:endpoint3";

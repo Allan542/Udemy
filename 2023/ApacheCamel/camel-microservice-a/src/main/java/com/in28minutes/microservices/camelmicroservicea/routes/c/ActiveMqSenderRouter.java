@@ -19,13 +19,13 @@ public class ActiveMqSenderRouter extends RouteBuilder {
             .log("${body}")
         .to("activemq:my-activemq-queue");
         //queues
-//        from("file:files/json") // apenas alguns endpoints estão presente na rota do camel, o que não causa o erro FailedToCreateRouteException, causado por NoSuchEndpointException
-//                .log("${body}")
-//        .to("activemq:my-activemq-queue");
+        from("file:files/json") // apenas alguns endpoints estão presente na rota do camel, o que não causa o erro FailedToCreateRouteException, causado por NoSuchEndpointException
+                .log("${body}")
+        .to("activemq:my-activemq-queue");
 
-//        from("file:files/xml")
-//        .log("${body}")
-//        .to("activemq:my-activemq-xml-queue");
+        from("file:files/xml")
+        .log("${body}")
+        .to("activemq:my-activemq-xml-queue");
     }
 
     private CryptoDataFormat createEncryptor() throws KeyStoreException, IOException, NoSuchAlgorithmException,
