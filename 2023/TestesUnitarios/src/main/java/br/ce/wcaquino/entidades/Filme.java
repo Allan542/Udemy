@@ -32,4 +32,13 @@ public class Filme {
 	public void setPrecoLocacao(Double precoLocacao) {
 		this.precoLocacao = precoLocacao;
 	}
+
+	@Override
+	public String toString() {
+		return "Filme{" +
+			"nome='" + nome + '\'' +
+			", estoque=" + estoque +
+			", precoLocacao=" + precoLocacao +
+			'}';
+	}
 }
