@@ -16,7 +16,7 @@ services:
         depends_on:
             - zookeeper
         ports:
-            - "9092:9092"
+            - "9092:9092" # porta da minha máquina local:porta do meu container
         environment:
             - "KAFKA_BROKER_ID=1"
             - "KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181"
@@ -35,6 +35,27 @@ services:
             - "19000:9000"
         environment:
             - "KAFKA_BROKER_CONNECT=kafka:29092"
+
+    payment:
+        image: allan542/payment-service:1.0.1
+        networks:
+            - broker-kafka
+        depends_on:
+            - kafka
+        ports:
+            - "8000:8000"
+        environment:
+            - "KAFKA_HOST=kafka:29092"
+    
+    consumer:
+        image: allan542/json-consumer:1.0.1
+        networks:
+            - broker-kafka
+        depends_on:
+            - kafka
+            - payment
+        environment:
+            - "KAFKA_HOST=kafka:29092"
 
 networks:
     broker-kafka:
