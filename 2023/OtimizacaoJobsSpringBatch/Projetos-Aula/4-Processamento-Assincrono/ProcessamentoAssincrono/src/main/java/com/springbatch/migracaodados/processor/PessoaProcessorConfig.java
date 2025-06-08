@@ -46,6 +46,9 @@ public class PessoaProcessorConfig  {
       try {
         String uri = String.format("http://my-json-server.typicode.com/giuliana-bezerra/demo/profile/%d", pessoa.getId());
         ResponseEntity<String> response = restTemplate.getForEntity(uri, String.class);
+        if(pessoa.getId() == 238){
+          throw new Exception();
+        }
       } catch (RestClientResponseException e) {
         logger.info("{}", pessoa.getId());
       }

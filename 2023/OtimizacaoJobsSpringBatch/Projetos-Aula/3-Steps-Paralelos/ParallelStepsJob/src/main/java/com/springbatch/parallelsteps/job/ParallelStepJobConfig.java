@@ -21,7 +21,7 @@ public class ParallelStepJobConfig {
 
 	@Bean
 	public Job parallelStepJob(@Qualifier("migrarPessoaStep") Step migrarPessoaStep,
-			@Qualifier("migrarDadosBancariosStep") Step migrarDadosBancariosStep) {
+								@Qualifier("migrarDadosBancariosStep") Step migrarDadosBancariosStep) {
 		return jobBuilderFactory
 				.get("parallelStepJob")
 				.start(stepsParalelos(migrarPessoaStep, migrarDadosBancariosStep))

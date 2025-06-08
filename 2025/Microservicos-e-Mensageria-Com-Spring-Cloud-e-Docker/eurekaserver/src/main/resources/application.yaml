@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eurekaserver
+
+# porta padrão do eureka server
+server:
+  port: 8761
+
+# configuração de client do eureka
+eureka:
+  client:
+    register-with-eureka: false # não é para o cliente se auto-registrar com o eureka
+    fetch-registry: false # não é para o buscar o registro dos microsserviços. Quem vai fazer essa busca dos microsserviços é o gateway para fazer o roteamento
